@@ -15,7 +15,7 @@ locals {
 
         value = join("", [
           domain_record_v.value,
-          domain_record_v.type != "A" ? "." : ""
+          domain_record_v.type == "CNAME" ? "." : ""
         ])
 
         port     = lookup(domain_record_v, "port", null)
