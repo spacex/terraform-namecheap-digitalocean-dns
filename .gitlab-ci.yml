@@ -1,2 +1,7 @@
 include:
   template: Terraform-Module.gitlab-ci.yml
+
+default:
+  before_script:
+    - cp /etc/gitlab-runner/certs/*.crt /usr/local/share/ca-certificates
+    - update-ca-certificates
