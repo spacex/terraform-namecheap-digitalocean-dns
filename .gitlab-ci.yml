@@ -1,6 +1,7 @@
 include:
   template: Terraform-Module.gitlab-ci.yml
 
+# This is specific to alpine, the current base for the gitlab-terraform images
 default:
   before_script:
     - cp /etc/gitlab-runner/certs/*.crt /usr/local/share/ca-certificates
